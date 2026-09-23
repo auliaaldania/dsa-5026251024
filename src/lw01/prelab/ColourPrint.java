@@ -7,7 +7,7 @@ public class ColourPrint extends PrintJob{
     }
 
     @Override
-    public int calculateChange(){
+    public int calculateCharge(){
         int pages = getPages();
         int baseCharge;
         if (pages <= 10){

@@ -7,7 +7,7 @@ public class MonoPrint extends PrintJob{
     }
 
     @Override
-    public int calculateChange(){
+    public int calculateCharge(){
         return getPages() * 500;
     }
 

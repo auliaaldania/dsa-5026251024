@@ -20,13 +20,13 @@ public abstract class PrintJob implements Chargeable{
     }
 
     @Override 
-    public abstract int calculateChange();
+    public abstract int calculateCharge();
 
     public int calculateChange(int copies) {
         if (copies <= 0){
             throw new IllegalArgumentException("Copies must be greater than zero.");
         }
-        return copies * calculateChange();
+        return copies * calculateCharge();
     }
 
     public String label(){
@@ -34,6 +34,6 @@ public abstract class PrintJob implements Chargeable{
     }
 
     public String summary(){
-        return id + " | " + label() + " | " + calculateChange();
+        return id + " | " + label() + " | " + calculateCharge();
     }
 }
