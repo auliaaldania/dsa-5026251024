@@ -9,15 +9,16 @@ public class Main {
         ArrayList<WashService> washes = new ArrayList<WashService>();
 
         while (scanner.hasNext()){
+            // int input = scanner.nextInt();
             String type = scanner.next();
             String id = scanner.next();
             int days = scanner.nextInt();
             int units = scanner.nextInt();
 
-            if (type.equals("Motorcycle")){
+            if (type.equals("MOTORCYCLE")){
                 washes.add(new MotorcycleWash(id, days));
-            } else if (type.equals("Car")){
-                washes.add(new CarWash(id, days));
+            } else if (type.equals("CAR")){
+                washes.add(new CarWash(id, days, units));
             }
         }
 
