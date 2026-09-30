@@ -9,15 +9,16 @@ public class Main {
     public static void main(String[] args) {
         LinkedList<String[]> transactionList = new LinkedList<>();
         LinkedList<String[]> customerList = new LinkedList<>();
+
         Queue<String[]> transactionQueue = new LinkedList<>();
         Stack<String[]> failedStack = new Stack<>();
 
-        Scanner sc = new Scanner(Main.class.getResourceAsStream("transactions.txt"));
+        Scanner scanner = new Scanner(Main.class.getResourceAsStream("transactions.txt"));
 
-        while (sc.hasNext()){
-            String name = sc.next();
-            String type = sc.next();
-            String amount = sc.next();
+        while (scanner.hasNext()){
+            String name = scanner.next();
+            String type = scanner.next();
+            String amount = scanner.next();
             transactionList.add(new String[] {name, type, amount});
         }
 
@@ -64,7 +65,7 @@ public class Main {
             System.out.println(t[0] + " " + t[1] + " " + t[2]);
         }
 
-        sc.close();
+        scanner.close();
     }
 
     private static String[] findCustomer(LinkedList<String[]> customerList, String name){
